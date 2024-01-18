@@ -6,16 +6,18 @@ import { useRouter } from "next/navigation";
 const Logo = () => {
   const router = useRouter();
 
-  return ( 
-    <Image
-      onClick={() => router.push('/')}
-      className="hidden md:block cursor-pointer" 
-      src="/images/logo.svg" 
-      height={48}
-      width={336}
-      alt="Logo" 
-    />
-   );
+  return (
+    <div className="h-[24px] md:h-[48px] w-[336px] relative">
+      <Image
+        onClick={() => router.push("/")}
+        className=" cursor-pointer"
+        src="/images/logo.svg"
+        layout="fill"
+        objectFit="cover"
+        alt="Logo"
+      />
+    </div>
+  );
 }
  
 export default Logo;

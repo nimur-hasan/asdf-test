@@ -12,15 +12,14 @@ export default function Footer() {
   return (
     <div className="bg-primary pt-20">
       <Container>
-        <div className="flex justify-between text-white pb-[60px]">
-          <div className="flex flex-start">
+        <div className="flex flex-col md:flex-row justify-between text-white pb-[60px]">
+          <div className="flex justify-center md:flex-start">
             <div className="flex flex-col items-center">
               <Image src={FooterLogo} alt="logo" />
-              <div className="flex gap-3 mt-6">
+              <div className="flex md:gap-3 mt-6">
                 <div
                   className="
-                    hidden
-                    md:flex
+                    flex
                     items-center
                     gap-1.5
                     text-neutral-100 
@@ -51,9 +50,9 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className="">
-            <div className="grid grid-cols-3 gap-[120px]">
-              <div className="">
+          <div className="mt-20 md:mt-0">
+            <div className="grid grid-cols-3 gap-10 md:gap-[120px]">
+              <div className="col-span-3 md:col-span-1">
                 <h2 className="text-xl font-semibold">Support</h2>
                 <div className="mt-6 flex flex-col leading-[200%] text-[#CBC9C9]">
                   <Link href={"#"}>Help Center</Link>
@@ -64,7 +63,7 @@ export default function Footer() {
                   <Link href={"#"}>Report neighborhood concern</Link>
                 </div>
               </div>
-              <div className="">
+              <div className="col-span-3 md:col-span-1">
                 <h2 className="text-xl font-semibold">Hosting</h2>
                 <div className="mt-6 flex flex-col leading-[200%] text-[#CBC9C9]">
                   <Link href={"#"}>Airbnb your home</Link>
@@ -75,7 +74,7 @@ export default function Footer() {
                   <Link href={"#"}>Airbnb-friendly apartments</Link>
                 </div>
               </div>
-              <div className="">
+              <div className="col-span-3 md:col-span-1">
                 <h2 className="text-xl font-semibold">Airbnb</h2>
                 <div className="mt-6 flex flex-col leading-[200%] text-[#CBC9C9]">
                   <Link href={"#"}>Newsroom</Link>
@@ -92,9 +91,9 @@ export default function Footer() {
       </Container>
       <div className="h-[1px] w-full bg-[#666060]"></div>
       <Container>
-        <div className="flex justify-between text-white py-5">
+        <div className="flex flex-col md:flex-row justify-between text-white py-5">
           <div className="text-lg font-medium">© 2023 Croscout, Inc.</div>
-          <div className="flex gap-[32px] text-lg text-[#CBC9C9] font-medium">
+          <div className="flex gap-4 md:gap-[32px] text-sm md:text-lg text-[#CBC9C9] font-medium">
             <Link href="#">Terms</Link>
             <Link href="#">Sitemap</Link>
             <Link href="#">Privacy</Link>

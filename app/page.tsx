@@ -36,16 +36,16 @@ const Home = async ({ searchParams }: HomeProps) => {
   return (
     <ClientOnly>
       <Hero />
-      <div className="mt-[14rem]" />
+      <div className="mt-10 md:mt-[14rem]" />
       <Container>
-        <div className="flex gap-5">
-          <button className="border px-[0.875rem] rounded-[3px] py-3">
+        <div className="flex gap-2 lg:gap-5">
+          <button className="border px-[0.875rem] rounded-[3px] py-1 lg:py-3">
             <div className="flex items-center gap-2 text-white">
               <Image src={FilterIcon} height={24} width={24} alt="" />
               <div className="">Filters</div>
             </div>
           </button>
-          <button className="border px-[0.875rem] rounded-[3px] py-3">
+          <button className="border px-[0.875rem] rounded-[3px] py-1 lg:py-3">
             <div className="flex items-center gap-2 text-white">
               <div className="">Display total before taxes</div>
               <label className="relative inline-flex items-center cursor-pointer">

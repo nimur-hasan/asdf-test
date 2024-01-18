@@ -168,7 +168,7 @@ export default function MultiCategory() {
       <p className="text-white font-semibold text-xl">
         Inspiration for future getaways
       </p>
-      <div className="mt-10 flex">
+      <div className="mt-10 flex max-w-screen lg:max-w-full overflow-x-scroll">
         {dataMultiCat.map((item, index) => (
           <div
             key={index}
@@ -181,11 +181,11 @@ export default function MultiCategory() {
           </div>
         ))}
       </div>
-      <div className="grid grid-cols-6 mt-20 gap-20">
+      <div className="grid grid-cols-6 mt-20 gap-5 lg:gap-20">
         {dataMultiCat[0].subCats.map((item, index) => (
           <div
             key={index}
-            className="text-lg font-semibold  cursor-pointer text-white whitespace-nowrap"
+            className="col-span-3 lg:col-span-1 text-lg font-semibold  cursor-pointer text-white whitespace-nowrap"
           >
             <div className="flex items-center gap-2">
               {item.title}
