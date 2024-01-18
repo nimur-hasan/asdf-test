@@ -1,0 +1,60 @@
+"use client";
+
+import React, { useState } from "react";
+import CategoryCard from "./CategoryCard";
+import AmazingView from '../../theme/icons/amazing-view.svg'
+import NationalPark from '../../theme/icons/national-parks.svg'
+import Beach from '../../theme/icons/beach.svg'
+import Lake from '../../theme/icons/lake.svg'
+import Caves from '../../theme/icons/caves.svg'
+import Islands from '../../theme/icons/islands.svg'
+import Campers from '../../theme/icons/campers.svg'
+import Castles from '../../theme/icons/castles.svg'
+import EarthHomes from '../../theme/icons/earth-homes.svg'
+import AmazingViewActive from "../../theme/icons/amazing-view-active.svg";
+import NationalParkActive from "../../theme/icons/national-parks-active.svg";
+import BeachActive from "../../theme/icons/beach-active.svg";
+import LakeActive from "../../theme/icons/lake-active.svg";
+import CavesActive from "../../theme/icons/caves-active.svg";
+import IslandsActive from "../../theme/icons/islands-active.svg";
+import CampersActive from "../../theme/icons/campers-active.svg";
+import CastlesActive from "../../theme/icons/castles-active.svg";
+import EarthHomesActive from "../../theme/icons/earth-homes-active.svg";
+
+import Slider from "react-slick";
+
+export default function CategoryList() {
+
+    const [activeCat, setActiveCat] = useState("Amazing views");
+
+  var settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 8,
+    slidesToScroll: 1,
+  };
+
+    const categoryList = [
+      { name: "Amazing views", icon: AmazingView , active: AmazingViewActive},
+        { name: "National parks", icon: NationalPark , active: NationalParkActive},
+        { name: "Beach", icon: Beach, active: BeachActive},
+        { name: "Lake", icon: Lake, active: LakeActive},
+        { name: "Caves", icon: Caves, active: CavesActive},
+        { name: "Islands", icon: Islands, active: IslandsActive},
+        { name: "Campers", icon: Campers, active: CampersActive},
+        { name: "Castles", icon: Castles, active: CastlesActive},
+        { name: "Earth homes", icon: EarthHomes, active: EarthHomesActive},
+    ];
+  return (
+    <div className=" w-full">
+      <Slider {...settings}>
+        {categoryList.map((item, index) => (
+          <div onClick={() => setActiveCat(item.name)} className="px-2">
+            <CategoryCard key={index} category={item} activeCat={activeCat} />
+          </div>
+        ))}
+      </Slider>
+    </div>
+  );
+}
