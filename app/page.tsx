@@ -68,8 +68,8 @@ const Home = async ({ searchParams }: HomeProps) => {
           <CategoryList />
         </div>
         <div className="grid grid-cols-4 gap-5">
-          {[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0].map((i) => (
-            <div className="col-span-4 md:col-span-1">
+          {[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0].map((item, index) => (
+            <div key={index} className="col-span-4 md:col-span-1">
               <ItemCard />
             </div>
           ))}
@@ -80,8 +80,7 @@ const Home = async ({ searchParams }: HomeProps) => {
       </Container>
       <div className="py-20 bg-secondary">
         <Container>
-         
-          <MultiCategory/>
+          <MultiCategory />
         </Container>
       </div>
     </ClientOnly>

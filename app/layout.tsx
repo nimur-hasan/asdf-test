@@ -1,4 +1,4 @@
-import { Nunito } from 'next/font/google'
+
 
 import Navbar from '@/app/components/navbar/Navbar';
 import LoginModal from '@/app/components/modals/LoginModal';
@@ -18,9 +18,6 @@ export const metadata = {
   description: 'Airbnb Clone',
 }
 
-const font = Nunito({ 
-  subsets: ['latin'], 
-});
 
 export default async function RootLayout({
   children,
@@ -35,7 +32,6 @@ export default async function RootLayout({
         <link
           rel="stylesheet"
           type="text/css"
-          charset="UTF-8"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
         />
         <link
@@ -45,7 +41,7 @@ export default async function RootLayout({
         />
         
       </head>
-      <body className={font.className}>
+      <body>
         <ClientOnly>
           <ToasterProvider />
           <LoginModal />

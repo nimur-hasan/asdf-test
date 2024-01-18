@@ -171,6 +171,7 @@ export default function MultiCategory() {
       <div className="mt-10 flex">
         {dataMultiCat.map((item, index) => (
           <div
+            key={index}
             onClick={() => setActiveCat(item.title)}
             className={`pb-4 font-semibold border-b ${
               activCat === item.title && "border-accent"

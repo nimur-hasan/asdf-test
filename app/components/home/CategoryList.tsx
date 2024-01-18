@@ -50,7 +50,7 @@ export default function CategoryList() {
     <div className=" w-full">
       <Slider {...settings}>
         {categoryList.map((item, index) => (
-          <div onClick={() => setActiveCat(item.name)} className="px-2">
+          <div key={index} onClick={() => setActiveCat(item.name)} className="px-2">
             <CategoryCard key={index} category={item} activeCat={activeCat} />
           </div>
         ))}
