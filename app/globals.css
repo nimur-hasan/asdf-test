@@ -8,7 +8,7 @@ html,
 body,
 :root {
   height: 100%;
-  font-family: 'Onest', sans-serif !important;
+  font-family: "Onest", sans-serif !important;
 }
 
 .leaflet-bottom,
@@ -28,4 +28,10 @@ body,
 }
 .m-shadow {
   box-shadow: 0px 4px 54px 0px rgba(23, 28, 30, 0.14);
+}
+.hover-card-shadow:hover {
+  box-shadow: 0px 3px 12px 0px rgba(6, 158, 237, 0.8);
+}
+.btn-shadow {
+  box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.25);
 }

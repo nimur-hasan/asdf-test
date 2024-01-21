@@ -16,6 +16,7 @@ import CategoryCard from "./components/home/CategoryCard";
 import CategoryList from "./components/home/CategoryList";
 import OutlinedButton from "./theme/buttons/OutlinedButton";
 import MultiCategory from "./components/home/MultiCategory";
+import Link from "next/link";
 
 interface HomeProps {
   searchParams: IListingsParams;
@@ -69,20 +70,15 @@ const Home = async ({ searchParams }: HomeProps) => {
         </div>
         <div className="grid grid-cols-4 gap-5">
           {[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0].map((item, index) => (
-            <div key={index} className="col-span-4 md:col-span-1">
+            <Link href='/details/123' key={index} className="col-span-4 md:col-span-1">
               <ItemCard />
-            </div>
+            </Link>
           ))}
         </div>
         <div className="py-[4.375rem]">
           <OutlinedButton>Show More</OutlinedButton>
         </div>
       </Container>
-      <div className="py-20 bg-secondary">
-        <Container>
-          <MultiCategory />
-        </Container>
-      </div>
     </ClientOnly>
   );
 };
