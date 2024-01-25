@@ -52,8 +52,8 @@ const Home = async ({ searchParams }: HomeProps) => {
               <label className="relative inline-flex items-center cursor-pointer">
                 <input type="checkbox" value="" className="sr-only peer" />
                 <div
-                  className="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:after:translate-x-full
-                  rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-['']
+                  className="w-11 h-6 bg-gray-200 rounded-full peer after:-translate-x-full peer-checked:after:translate-x-[0]
+                   peer-checked:after:border-white after:content-['']
                   after:absolute after:top-0.5 after:start-[2px] after:bg-primary
                    after:rounded-full after:h-5 after:w-5 after:transition-all
                   peer-checked:bg-accent"
@@ -70,7 +70,11 @@ const Home = async ({ searchParams }: HomeProps) => {
         </div>
         <div className="grid grid-cols-4 gap-5">
           {[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0].map((item, index) => (
-            <Link href='/details/123' key={index} className="col-span-4 md:col-span-1">
+            <Link
+              href="/details/123"
+              key={index}
+              className="col-span-4 md:col-span-1"
+            >
               <ItemCard />
             </Link>
           ))}

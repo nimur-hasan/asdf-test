@@ -69,10 +69,10 @@ export default function Hero() {
                     <div className="font-medium">Night x $45</div>
                     <div className="font-medium">$225</div>
                   </div>
-                  <div className="flex justify-between border-b border-accent py-3">
+                  {/* <div className="flex justify-between border-b border-accent py-3">
                     <div className="font-medium">Croscout Services Fee</div>
                     <div className="font-medium">$30</div>
-                  </div>
+                  </div> */}
                   <div className="flex justify-between items-center mt-3">
                     <div className="font-medium">Total</div>
                     <div className="font-medium border border-accent px-3 py-1.5 rounded">

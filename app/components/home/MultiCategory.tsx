@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
 
 export default function MultiCategory() {
@@ -163,6 +163,11 @@ export default function MultiCategory() {
       ],
     },
   ];
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
     <div className="">
       <p className="text-white font-semibold text-xl">

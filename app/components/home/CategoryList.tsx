@@ -29,7 +29,7 @@ export default function CategoryList() {
 
     const CustomPrevArrow = (props:any) => (
       <div
-        className="custom-next-arrow bg-gray-300 cursor-pointer -left-[10px] lg:-left-[40px] h-[24px] w-[24px] rounded-full flex justify-center items-center"
+        className="custom-next-arrow bg-gray-300 cursor-pointer -left-[28px] lg:-left-[40px] h-[24px] w-[24px] rounded-full flex justify-center items-center"
         onClick={props.onClick}
         style={{ position: "absolute",  top: "31%", zIndex: 1 }}
       >
@@ -40,7 +40,7 @@ export default function CategoryList() {
 
 const CustomNextArrow = (props:any) => (
   <div
-    className="custom-next-arrow bg-gray-300 cursor-pointer -right-[10px] lg:-right-[40px] h-[24px] w-[24px] rounded-full flex justify-center items-center"
+    className="custom-next-arrow bg-gray-300 cursor-pointer -right-[28px] lg:-right-[40px] h-[24px] w-[24px] rounded-full flex justify-center items-center"
     onClick={props.onClick}
     style={{ position: 'absolute', top: '31%', zIndex: 1 }}
   >
@@ -97,7 +97,7 @@ const CustomNextArrow = (props:any) => (
     { name: "Earth homes", icon: EarthHomes, active: EarthHomesActive },
   ];
   return (
-    <div className=" w-full">
+    <div className=" w-full px-6">
       <Slider {...settings}>
         {categoryList.map((item, index) => (
           <div
